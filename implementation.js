@@ -14,7 +14,7 @@ var isClass = function isClass(fn) {
 	try {
 		var match = stringMatch(functionToString(fn), classRegex);
 		return !!match;
-	} catch (e) { /**/ }
+	} catch (e) {}
 	return false;
 };
 
