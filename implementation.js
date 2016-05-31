@@ -9,8 +9,12 @@ var stringMatch = bind.call(Function.call, String.prototype.match);
 var classRegex = /^class /;
 
 var isClass = function isClass(fn) {
-	if (isCallable(fn)) { return false; }
-	if (typeof fn !== 'function') { return false; }
+	if (isCallable(fn)) {
+		return false;
+	}
+	if (typeof fn !== 'function') {
+		return false;
+	}
 	try {
 		var match = stringMatch(functionToString(fn), classRegex);
 		return !!match;
