@@ -4,9 +4,9 @@ var functionsHaveNames = function foo() {}.name === 'foo';
 var arrowFn = require('make-arrow-function')();
 var genFn = require('make-generator-function');
 
-var foo = function foo() {};
-var anon = function () {};
-var evalled = Function();
+var foo = Object(function foo() {});
+var anon = Object(function () {});
+var evalled = Object(Function());
 
 module.exports = function (getName, t) {
 	t.test('functions', function (st) {
