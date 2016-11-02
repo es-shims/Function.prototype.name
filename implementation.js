@@ -22,7 +22,7 @@ var isClass = function isClass(fn) {
 	return false;
 };
 
-var regex = /\s*function\s+([^\(\s]*)\s*/;
+var regex = /\s*function\s+([^(\s]*)\s*/;
 
 module.exports = function getName() {
 	if (!isClass(this) && !isCallable(this)) {
