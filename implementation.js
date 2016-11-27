@@ -8,7 +8,7 @@ var stringMatch = bind.call(Function.call, String.prototype.match);
 
 var classRegex = /^class /;
 
-var isClass = function isClass(fn) {
+var isClass = function isClassConstructor(fn) {
 	if (isCallable(fn)) {
 		return false;
 	}
