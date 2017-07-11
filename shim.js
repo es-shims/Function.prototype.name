@@ -5,8 +5,6 @@ var functionsHaveNames = function foo() {}.name === 'foo';
 var getPolyfill = require('./polyfill');
 var defineProperty = Object.defineProperty;
 var TypeErr = TypeError;
-var bind = require('function-bind');
-var fnCall = bind.call(Function.call);
 
 module.exports = function shimName() {
 	var polyfill = getPolyfill();
@@ -22,7 +20,7 @@ module.exports = function shimName() {
 			configurable: true,
 			enumerable: false,
 			get: function () {
-				var name = fnCall(polyfill, this);
+				var name = polyfill.call(this);
 				if (this !== functionProto) {
 					defineProperty(this, 'name', {
 						configurable: true,
