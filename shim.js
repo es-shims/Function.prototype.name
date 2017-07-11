@@ -17,17 +17,20 @@ module.exports = function shimName() {
 		throw new TypeErr('Shimming Function.prototype.name support requires ES5 property descriptor support.');
 	}
 	if (function foo() {}.name !== 'foo') {
-		defineProperty(Function.prototype, 'name', {
+		var functionProto = Function.prototype;
+		defineProperty(functionProto, 'name', {
 			configurable: true,
 			enumerable: false,
 			get: function () {
 				var name = fnCall(polyfill, this);
-				defineProperty(this, 'name', {
-					configurable: true,
-					enumerable: false,
-					value: name,
-					writable: false
-				});
+				if (this !== functionProto) {
+					defineProperty(this, 'name', {
+						configurable: true,
+						enumerable: false,
+						value: name,
+						writable: false
+					});
+				}
 				return name;
 			}
 		});

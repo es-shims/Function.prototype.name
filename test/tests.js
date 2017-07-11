@@ -47,4 +47,14 @@ module.exports = function (getName, t) {
 		}
 		st.end();
 	});
+
+	t.test('Function.prototype.name', function (st) {
+		st.equal(getName(function before() {}), 'before', 'function prior to accessing Function.prototype has the right name');
+		var protoName = getName(Function.prototype);
+		// on <= node v2.5, this is "Empty" - otherwise, the empty string
+		st.equal(protoName === '' || protoName === 'Empty', true, 'Function.prototype has the right name');
+		st.equal(getName(function after() {}), 'after', 'function after accessing Function.prototype has the right name');
+
+		st.end();
+	});
 };

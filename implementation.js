@@ -24,12 +24,17 @@ var isClass = function isClassConstructor(fn) {
 
 var regex = /\s*function\s+([^(\s]*)\s*/;
 
+var functionProto = Function.prototype;
+
 module.exports = function getName() {
 	if (!isClass(this) && !isCallable(this)) {
 		throw new TypeError('Function.prototype.name sham getter called on non-function');
 	}
 	if (functionsHaveNames) {
 		return this.name;
+	}
+	if (this === functionProto) {
+		return '';
 	}
 	var str = functionToString(this);
 	var match = stringMatch(str, regex);
