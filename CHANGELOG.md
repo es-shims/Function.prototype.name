@@ -1,3 +1,7 @@
+1.0.2 / 2017-07-14
+=================
+  * [Refactor] shim: Remove unnecessary `!functionsHaveNames` check
+
 1.0.1 / 2017-07-11
 =================
   * [Fix] in IE 9-11, we must rely on `.call` being available (#13)
