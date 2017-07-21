@@ -10,7 +10,7 @@
 		"pretest": "npm run lint",
 		"test": "npm run --silent tests-only",
 		"posttest": "npm run security",
-		"tests-only": "es-shim-api --bound && node test/index.js",
+		"tests-only": "es-shim-api --bound && node test && node test/shimmed && node test/uglified",
 		"coverage": "covert test/*.js",
 		"coverage-quiet": "covert test/*.js --quiet",
 		"lint": "npm run jscs && npm run eslint",
@@ -47,7 +47,9 @@
 		"make-generator-function": "^1.1.0",
 		"nsp": "^2.6.3",
 		"safe-publish-latest": "^1.1.1",
-		"tape": "^4.7.0"
+		"tape": "^4.7.0",
+		"uglify-js": "^3.0.25",
+		"uglify-register": "^1.0.0"
 	},
 	"testling": {
 		"files": "test/index.js",
