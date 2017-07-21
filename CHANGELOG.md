@@ -1,3 +1,8 @@
+1.0.3 / 2017-07-21
+=================
+  * [Fix] be robust against function name mangling
+  * [Refactor] move function name detection to separate file
+
 1.0.2 / 2017-07-14
 =================
   * [Refactor] shim: Remove unnecessary `!functionsHaveNames` check
