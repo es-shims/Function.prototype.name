@@ -1,3 +1,10 @@
+1.1.0 / 2017-12-31
+=================
+  * [New] add `auto` entry point
+  * [Deps] update `function-bind`
+  * [Dev Deps] update `uglify-register`, `tape`, `nsp`, `eslint`, `@ljharb/eslint-config`, `@es-shims/api`
+  * [Tests] up to `node` `v9.3`, `v8.9`, `v6.12`; use `nvm install-latest-npm`; pin included builds to LTS
+
 1.0.3 / 2017-07-21
 =================
   * [Fix] be robust against function name mangling
