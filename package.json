@@ -13,9 +13,7 @@
 		"tests-only": "es-shim-api --bound && node test && node test/shimmed && node test/uglified",
 		"coverage": "covert test/*.js",
 		"coverage-quiet": "covert test/*.js --quiet",
-		"lint": "npm run jscs && npm run eslint",
-		"eslint": "eslint test/*.js *.js",
-		"jscs": "jscs test/*.js *.js",
+		"lint": "eslint .",
 		"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
 		"security": "nsp package"
 	},
@@ -42,7 +40,6 @@
 		"covert": "^1.1.0",
 		"editorconfig-tools": "^0.1.1",
 		"eslint": "^4.19.1",
-		"jscs": "^3.0.7",
 		"make-arrow-function": "^1.1.0",
 		"make-generator-function": "^1.1.0",
 		"nsp": "^3.2.1",
