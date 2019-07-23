@@ -6,7 +6,7 @@ var genFn = require('make-generator-function');
 
 var foo = Object(function foo() {});
 var anon = Object(function () {});
-var evalled = Object(Function());
+var evalled = Object(Function()); // eslint-disable-line no-new-func
 
 module.exports = function (getName, t) {
 	t.test('functions', function (st) {
