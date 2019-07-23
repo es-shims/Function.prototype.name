@@ -8,8 +8,6 @@
 
 [![npm badge][11]][1]
 
-[![browser support][9]][10]
-
 An ES6 spec-compliant `Function.prototype.name` shim. Invoke its "shim" method to shim Function.prototype.name if it is unavailable.
 *Note*: `Function#name` requires a true ES5 environment - specifically, one with ES5 getters.
 
@@ -33,15 +31,13 @@ assert.equal(function foo() {}.name, 'foo');
 Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/function.prototype.name
-[2]: http://versionbadg.es/ljharb/function.prototype.name.svg
-[3]: https://travis-ci.org/ljharb/function.prototype.name.svg
-[4]: https://travis-ci.org/ljharb/function.prototype.name
-[5]: https://david-dm.org/ljharb/function.prototype.name.svg
-[6]: https://david-dm.org/ljharb/function.prototype.name
-[7]: https://david-dm.org/ljharb/function.prototype.name/dev-status.svg
-[8]: https://david-dm.org/ljharb/function.prototype.name#info=devDependencies
-[9]: https://ci.testling.com/ljharb/function.prototype.name.png
-[10]: https://ci.testling.com/ljharb/function.prototype.name
+[2]: http://versionbadg.es/es-shims/function.prototype.name.svg
+[3]: https://travis-ci.org/es-shims/function.prototype.name.svg
+[4]: https://travis-ci.org/es-shims/function.prototype.name
+[5]: https://david-dm.org/es-shims/function.prototype.name.svg
+[6]: https://david-dm.org/es-shims/function.prototype.name
+[7]: https://david-dm.org/es-shims/function.prototype.name/dev-status.svg
+[8]: https://david-dm.org/es-shims/function.prototype.name#info=devDependencies
 [11]: https://nodei.co/npm/function.prototype.name.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/function.prototype.name.svg
 [license-url]: LICENSE
