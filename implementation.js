@@ -1,7 +1,7 @@
 'use strict';
 
 var isCallable = require('is-callable');
-var functionsHaveNames = require('./helpers/functionsHaveNames');
+var functionsHaveNames = require('functions-have-names')();
 var bind = require('function-bind');
 var functionToString = bind.call(Function.call, Function.prototype.toString);
 var stringMatch = bind.call(Function.call, String.prototype.match);

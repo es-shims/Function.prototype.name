@@ -1,6 +1,6 @@
 'use strict';
 
-var functionsHaveNames = require('../helpers/functionsHaveNames');
+var functionsHaveNames = require('functions-have-names')();
 var arrowFn = require('make-arrow-function')();
 var genFn = require('make-generator-function');
 

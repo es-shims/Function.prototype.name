@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports = typeof function foo() {}.name === 'string'; // when function names are minified, checking for "foo" would break
+module.exports = require('functions-have-names')();
+
+// TODO: semver-major, remove
