@@ -1,3 +1,16 @@
+1.1.1 / 2019-07-24
+=================
+  * [Refactor] use `functions-have-names`
+  * [meta] clean up package.json scripts
+  * [meta] update links
+  * [meta] create FUNDING.yml
+  * [Deps] update `is-callable`, `define-properties`
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `tape`, `safe-publish-latest`,  `covert`
+  * [Tests] use `eccheck` over `editorconfig-tools`
+  * [Tests] use `npx aud` instead of `nsp` or `npm audit` with hoops
+  * [Tests] up to `node` `v11.7`, `v10.15`, `v9.11`, `v8.15`, `v6.16`, `v4.9`
+  * [Test] remove `jscs`
+
 1.1.0 / 2017-12-31
 =================
   * [New] add `auto` entry point
