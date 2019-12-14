@@ -1,3 +1,13 @@
+1.1.2 / 2019-12-14
+=================
+  * [Refactor] use `es-abstract`
+  * [Deps] update `functions-have-names`
+  * [meta] add `funding` field
+  * [meta] fix repo capitalization
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `safe-publish-latest`
+  * [Tests] use shared travis-ci configs
+  * [actions] add automatic rebasing / merge commit blocking
+
 1.1.1 / 2019-07-24
 =================
   * [Refactor] use `functions-have-names`
