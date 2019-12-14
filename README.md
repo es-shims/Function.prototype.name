@@ -8,7 +8,7 @@
 
 [![npm badge][11]][1]
 
-An ES6 spec-compliant `Function.prototype.name` shim. Invoke its "shim" method to shim Function.prototype.name if it is unavailable.
+An ES2015 spec-compliant `Function.prototype.name` shim. Invoke its "shim" method to shim Function.prototype.name if it is unavailable.
 *Note*: `Function#name` requires a true ES5 environment - specifically, one with ES5 getters.
 
 This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES5-supported environment and complies with the [spec](http://www.ecma-international.org/ecma-262/6.0/#sec-get-regexp.prototype.flags).
@@ -31,13 +31,13 @@ assert.equal(function foo() {}.name, 'foo');
 Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/function.prototype.name
-[2]: http://versionbadg.es/es-shims/function.prototype.name.svg
-[3]: https://travis-ci.org/es-shims/function.prototype.name.svg
-[4]: https://travis-ci.org/es-shims/function.prototype.name
-[5]: https://david-dm.org/es-shims/function.prototype.name.svg
-[6]: https://david-dm.org/es-shims/function.prototype.name
-[7]: https://david-dm.org/es-shims/function.prototype.name/dev-status.svg
-[8]: https://david-dm.org/es-shims/function.prototype.name#info=devDependencies
+[2]: http://versionbadg.es/es-shims/Function.prototype.name.svg
+[3]: https://travis-ci.org/es-shims/Function.prototype.name.svg
+[4]: https://travis-ci.org/es-shims/Function.prototype.name
+[5]: https://david-dm.org/es-shims/Function.prototype.name.svg
+[6]: https://david-dm.org/es-shims/Function.prototype.name
+[7]: https://david-dm.org/es-shims/Function.prototype.name/dev-status.svg
+[8]: https://david-dm.org/es-shims/Function.prototype.name#info=devDependencies
 [11]: https://nodei.co/npm/function.prototype.name.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/function.prototype.name.svg
 [license-url]: LICENSE

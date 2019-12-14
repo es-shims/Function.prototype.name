@@ -2,7 +2,7 @@
 	"name": "function.prototype.name",
 	"version": "1.1.1",
 	"author": "Jordan Harband",
-	"description": "An ES6 spec-compliant `Function.prototype.name` shim",
+	"description": "An ES2015 spec-compliant `Function.prototype.name` shim",
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
@@ -17,12 +17,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/es-shims/function.prototype.name.git"
+		"url": "git://github.com/es-shims/Function.prototype.name.git"
 	},
 	"keywords": [
 		"Function.prototype.name",
+		"function",
 		"name",
 		"ES6",
+		"ES2015",
 		"shim",
 		"polyfill",
 		"es-shim API"
