@@ -1,8 +1,10 @@
 'use strict';
 
 var functionsHaveNames = require('functions-have-names')();
-var arrowFn = require('make-arrow-function')();
-var genFn = require('make-generator-function');
+var arrows = require('make-arrow-function').list();
+var generators = require('make-generator-function')();
+var asyncs = require('make-async-function').list();
+var forEach = require('for-each');
 
 var foo = Object(function foo() {});
 var anon = Object(function () {});
@@ -22,29 +24,27 @@ module.exports = function (getName, t) {
 		st.end();
 	});
 
-	t.test('arrow functions', { skip: !arrowFn }, function (st) {
-		if (functionsHaveNames) {
-			st.equal(getName(arrowFn), arrowFn.name, 'arrow function name matches');
-		}
-		st.equal(getName(arrowFn), '', 'arrow function has correct name');
+	t.test('arrow functions', { skip: arrows.length === 0 }, function (st) {
+		st.equal(true, functionsHaveNames, 'functions have names in any env with arrow functions');
+		forEach(arrows, function (arrowFn) {
+			st.equal(getName(arrowFn), arrowFn.name, 'arrow function name matches for ' + arrowFn);
+		});
 		st.end();
 	});
 
-	t.test('generators', { skip: !genFn }, function (st) {
-		if (functionsHaveNames) {
-			st.equal(getName(genFn), genFn.name, 'generator function name matches');
-			if (genFn.concise) {
-				st.equal(getName(genFn.concise), genFn.concise.name, 'concise generator function name matches');
-			} else {
-				st.skip('concise generator functions not supported');
-			}
-		}
-		st.equal(getName(genFn), '', 'generator function has correct name');
-		if (genFn.concise) {
-			st.equal(getName(genFn.concise), 'gen', 'concise generator function has correct name');
-		} else {
-			st.skip('concise generator functions not supported');
-		}
+	t.test('generators', { skip: generators.length === 0 }, function (st) {
+		st.equal(true, functionsHaveNames, 'functions have names in any env with generator functions');
+		forEach(generators, function (genFn) {
+			st.equal(getName(genFn), genFn.name, 'generator function name matches for ' + genFn);
+		});
+		st.end();
+	});
+
+	t.test('asyncs', { skip: asyncs.length === 0 }, function (st) {
+		st.equal(true, functionsHaveNames, 'functions have names in any env with async functions');
+		forEach(asyncs, function (asyncFn) {
+			st.equal(getName(asyncFn), asyncFn.name, 'async function name matches for ' + asyncFn);
+		});
 		st.end();
 	});
 
