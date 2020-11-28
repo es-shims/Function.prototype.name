@@ -13,9 +13,11 @@
 		"pretest": "npm run lint",
 		"test": "npm run --silent tests-only",
 		"posttest": "npx aud --production",
-		"tests-only": "es-shim-api --bound && node test && node test/shimmed && node test/uglified",
+		"tests-only": "tape 'test/**/*.js'",
 		"coverage": "covert test",
+		"prelint": "npm run eccheck",
 		"lint": "eslint .",
+		"postlint": "es-shim-api --bound",
 		"eccheck": "eclint check '*.js' '**/*.js'"
 	},
 	"repository": {
@@ -44,6 +46,7 @@
 		"eclint": "^2.8.1",
 		"eslint": "^7.0.0",
 		"for-each": "^0.3.3",
+		"has-strict-mode": "^1.0.0",
 		"make-arrow-function": "^1.2.0",
 		"make-async-function": "^1.0.0",
 		"make-generator-function": "^2.0.0",
