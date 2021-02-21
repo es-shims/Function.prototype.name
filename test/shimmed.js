@@ -1,6 +1,6 @@
 'use strict';
 
-require('../shim')();
+require('../auto');
 
 var test = require('tape');
 var supportsDescriptors = require('define-properties').supportsDescriptors;
