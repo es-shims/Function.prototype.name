@@ -1,3 +1,14 @@
+1.1.4 / 2021-02-22
+=================
+  * [readme] remove travis badge
+  * [meta] remove audit-level
+  * [meta] gitignore coverage output
+  * [meta] do not publish github action workflow files
+  * [Deps] update `call-bind`, `es-abstract`, `functions-have-names`
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `has-strict-mode`, `tape`
+  * [Tests] increase coverage
+  * [actions] update workflows
+
 1.1.3 / 2020-11-27
 =================
   * [Deps] update `es-abstract`, `functions-have-names`; use `call-bind` where applicable
