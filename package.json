@@ -45,7 +45,7 @@
 		"@ljharb/eslint-config": "^17.5.1",
 		"aud": "^1.1.4",
 		"eclint": "^2.8.1",
-		"eslint": "^7.20.0",
+		"eslint": "^7.23.0",
 		"for-each": "^0.3.3",
 		"has-strict-mode": "^1.0.1",
 		"make-arrow-function": "^1.2.0",
@@ -53,7 +53,7 @@
 		"make-generator-function": "^2.0.0",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.0",
+		"tape": "^5.2.2",
 		"uglify-register": "^1.0.1"
 	},
 	"testling": {
