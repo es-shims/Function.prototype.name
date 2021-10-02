@@ -1,3 +1,11 @@
+1.1.5 / 2021-10-01
+=================
+  * [Deps] update `es-abstract`
+  * [meta] use `prepublishOnly` script for npm 7+
+  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `aud`, `tape`
+  * [actions] update workflows
+  * [actions] use `node/install` instead of `node/run`; use `codecov` action
+
 1.1.4 / 2021-02-22
 =================
   * [readme] remove travis badge
