@@ -41,11 +41,11 @@
 		"functions-have-names": "^1.2.2"
 	},
 	"devDependencies": {
-		"@es-shims/api": "^2.1.2",
-		"@ljharb/eslint-config": "^17.5.1",
-		"aud": "^1.1.4",
+		"@es-shims/api": "^2.2.1",
+		"@ljharb/eslint-config": "^18.0.0",
+		"aud": "^1.1.5",
 		"eclint": "^2.8.1",
-		"eslint": "^7.23.0",
+		"eslint": "^7.32.0",
 		"for-each": "^0.3.3",
 		"has-strict-mode": "^1.0.1",
 		"make-arrow-function": "^1.2.0",
@@ -53,7 +53,7 @@
 		"make-generator-function": "^2.0.0",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.2",
+		"tape": "^5.3.1",
 		"uglify-register": "^1.0.1"
 	},
 	"testling": {
