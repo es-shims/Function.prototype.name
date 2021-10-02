@@ -1,6 +1,6 @@
 'use strict';
 
-var IsCallable = require('es-abstract/2020/IsCallable');
+var IsCallable = require('es-abstract/2021/IsCallable');
 var functionsHaveNames = require('functions-have-names')();
 var callBound = require('call-bind/callBound');
 var $functionToString = callBound('Function.prototype.toString');
