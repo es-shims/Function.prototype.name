@@ -41,10 +41,10 @@
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.2.3",
-		"@ljharb/eslint-config": "^20.2.0",
+		"@ljharb/eslint-config": "^21.0.0",
 		"aud": "^2.0.0",
 		"eclint": "^2.8.1",
-		"eslint": "^8.6.0",
+		"eslint": "=8.8.0",
 		"for-each": "^0.3.3",
 		"has-strict-mode": "^1.0.1",
 		"make-arrow-function": "^1.2.0",
@@ -52,7 +52,7 @@
 		"make-generator-function": "^2.0.0",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"tape": "^5.4.0",
+		"tape": "^5.5.3",
 		"uglify-register": "^1.0.1"
 	},
 	"testling": {
