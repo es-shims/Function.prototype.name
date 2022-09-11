@@ -9,6 +9,8 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
 		"prepublish": "not-in-publish || npm run prepublishOnly",
 		"prepublishOnly": "safe-publish-latest",
 		"pretest": "npm run lint",
@@ -43,6 +45,7 @@
 		"@es-shims/api": "^2.2.3",
 		"@ljharb/eslint-config": "^21.0.0",
 		"aud": "^2.0.0",
+		"auto-changelog": "^2.4.0",
 		"eclint": "^2.8.1",
 		"eslint": "=8.8.0",
 		"for-each": "^0.3.3",
@@ -75,5 +78,14 @@
 	},
 	"engines": {
 		"node": ">= 0.4"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false,
+		"hideCredit": true,
+		"startingVersion": "v1.1.6"
 	}
 }
