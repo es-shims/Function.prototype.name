@@ -51,8 +51,8 @@ module.exports = function (getName, t) {
 	t.test('Function.prototype.name', function (st) {
 		st.equal(getName(function before() {}), 'before', 'function prior to accessing Function.prototype has the right name');
 		var protoName = getName(Function.prototype);
-		// on <= node v2.5, this is "Empty" - otherwise, the empty string
-		st.equal(protoName === '' || protoName === 'Empty', true, 'Function.prototype has the right name');
+		// on <= node v2.5, this is "Empty"; on Opera 12.1, "Function.prototype" - otherwise, the empty string
+		st.equal(protoName === '' || protoName === 'Empty' || protoName === 'Function.prototype', true, 'Function.prototype has the right name');
 		st.equal(getName(function after() {}), 'after', 'function after accessing Function.prototype has the right name');
 
 		st.end();
