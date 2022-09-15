@@ -57,4 +57,20 @@ module.exports = function (getName, t) {
 
 		st.end();
 	});
+
+	t.test('DOM', function (st) {
+		/* eslint-env browser */
+
+		st.test('document.all', { skip: typeof document !== 'object' }, function (s2t) {
+			s2t['throws'](
+				function () { getName(document.all); },
+				TypeError,
+				'a document.all has no name'
+			);
+
+			s2t.end();
+		});
+
+		st.end();
+	});
 };
