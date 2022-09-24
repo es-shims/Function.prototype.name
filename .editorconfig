@@ -13,6 +13,10 @@ max_line_length = off
 indent_style = space
 indent_size = 2
 
+[README.md]
+indent_style = space
+indent_size = 2
+
 [*.json]
 max_line_length = off
 
