@@ -4,6 +4,7 @@ var functionsHaveNames = require('functions-have-names')();
 var arrows = require('make-arrow-function').list();
 var generators = require('make-generator-function')();
 var asyncs = require('make-async-function').list();
+var IsCallable = require('es-abstract/2022/IsCallable');
 var forEach = require('for-each');
 
 var foo = Object(function foo() {});
@@ -69,6 +70,33 @@ module.exports = function (getName, t) {
 			);
 
 			s2t.end();
+		});
+
+		forEach([
+			'HTMLElement',
+			'HTMLAnchorElement'
+		], function (name) {
+			var constructor = global[name];
+
+			st.test(name, { skip: !constructor }, function (s2t) {
+				s2t.match(typeof constructor, /^(?:function|object)$/, name + ' is a function or an object');
+
+				if (IsCallable(constructor)) {
+					try {
+						s2t.equal(getName(constructor), name, name + ' has the right name');
+					} catch (e) {
+						s2t.fail(e);
+					}
+				} else {
+					s2t['throws'](
+						function () { getName(constructor); },
+						TypeError,
+						name + ' is not callable'
+					);
+				}
+
+				s2t.end();
+			});
 		});
 
 		st.end();

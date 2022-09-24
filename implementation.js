@@ -1,6 +1,7 @@
 'use strict';
 
-var IsCallable = require('es-abstract/2021/IsCallable');
+var IsCallable = require('es-abstract/2022/IsCallable');
+var HasOwnProperty = require('es-abstract/2022/HasOwnProperty');
 var functionsHaveNames = require('functions-have-names')();
 var callBound = require('call-bind/callBound');
 var $functionToString = callBound('Function.prototype.toString');
@@ -58,7 +59,7 @@ module.exports = function getName() {
 	if (isDDA(this) || (!isClass(this) && !IsCallable(this))) {
 		throw new TypeError('Function.prototype.name sham getter called on non-function');
 	}
-	if (functionsHaveNames) {
+	if (functionsHaveNames && HasOwnProperty(this, 'name')) {
 		return this.name;
 	}
 	if (this === functionProto) {
