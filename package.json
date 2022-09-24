@@ -45,7 +45,7 @@
 	"devDependencies": {
 		"@es-shims/api": "^2.2.3",
 		"@ljharb/eslint-config": "^21.0.0",
-		"aud": "^2.0.0",
+		"aud": "^2.0.1",
 		"auto-changelog": "^2.4.0",
 		"eclint": "^2.8.1",
 		"eslint": "=8.8.0",
@@ -57,7 +57,7 @@
 		"npmignore": "^0.3.0",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"tape": "^5.6.0",
+		"tape": "^5.6.1",
 		"uglify-register": "^1.0.1"
 	},
 	"testling": {
