@@ -1,0 +1,32 @@
+name: 'Tests: browsers'
+
+on:
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: 'SHA to test'
+        required: true
+        default: main
+        type: string
+      browser:
+        description: 'Browser to test'
+        default: ''
+        type: string
+
+jobs:
+  tests:
+    uses: ljharb/actions/.github/workflows/browser.yml@main
+    with:
+      browser: ${{ inputs.browser }}
+      sha: ${{ inputs.sha }}
+    secrets:
+      username: ${{ secrets.BROWSERSTACK_USERNAME }}
+      accessKey: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+
+  browser:
+    name: 'browser tests (${{ inputs.browser }} @ ${{ inputs.sha }})'
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo tests completed'
+
