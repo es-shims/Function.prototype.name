@@ -1,7 +1,7 @@
 'use strict';
 
-var IsCallable = require('es-abstract/2023/IsCallable');
-var HasOwnProperty = require('es-abstract/2023/HasOwnProperty');
+var IsCallable = require('es-abstract/2024/IsCallable');
+var HasOwnProperty = require('es-abstract/2024/HasOwnProperty');
 var functionsHaveNames = require('functions-have-names')();
 var callBound = require('call-bind/callBound');
 var $functionToString = callBound('Function.prototype.toString');
