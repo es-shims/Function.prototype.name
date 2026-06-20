@@ -27,7 +27,7 @@ var isClass = function isClassConstructor(fn) {
 	return false;
 };
 
-var regex = /\s*function\s+([^(\s]*)\s*/;
+var regex = /^\s*function\s+([^(\s]*)\s*/;
 
 var functionProto = Function.prototype;
 
@@ -44,7 +44,7 @@ module.exports = function getName() {
 	}
 	var str = $functionToString(this);
 	var match = $stringMatch(str, regex);
-	var name = match && match[1];
+	var name = (match && match[1]) || '';
 
 	return /** @type {string} */ (name);
 };
